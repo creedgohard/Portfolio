@@ -1,0 +1,110 @@
+body {
+    background: #222;
+    font-family: Endor Regular;
+    line-height: 1.4;
+    max-width: 100%;
+}
+.wrapper {
+    display: grid;
+    grid-gap: 1px;
+    max-width: 100%;
+}
+
+/*Navigation bar setup*/
+.logo {
+    width: 120px;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background:#000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav .mainMenu {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none ;
+    text-transform: lowercase;
+    color: red;
+    font-size: 1.5rem;
+}
+
+nav .mainMenu li a:hover {
+    background: #fff;
+    text-transform: uppercase;
+}
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu , .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.fa-github:hover {
+    color: red;
+}
+.fa-linkedin:hover {
+    color: green;
+}
+.fa-twitter:hover {
+    color: skyblue;
+}
+nav .logo {
+    margin: 6px;
+    cursor: pointer;
+}
+@media(max-width: 800px) {
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition:top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: red;
+        font-size: 1.6rem;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+}
+
