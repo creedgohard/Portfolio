@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@font-face {
+    font-family: Medusa Gothic Regular;
+    src: url(fonts/MedusaGothic\ D.otf);
+
+}
+:root {
+    --primary: #e48383;
+    --dark: black;
+    --light: white;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
 body {
-    background: #222;
-    font-family: Endor Regular;
+    background:var(--primary);
+    font-family:Medusa Gothic Regular;
     line-height: 1.4;
     max-width: 100%;
 }
@@ -12,17 +24,17 @@ body {
 
 /*Navigation bar setup*/
 .logo {
-    width: 120px;
+    width: 13rem;
 }
 
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0px;
 }
 
 nav {
-    background:#000;
+    background:var(--dark);
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -31,26 +43,30 @@ nav {
 
 nav .mainMenu {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 0fr);
     list-style: none;
 }
 
 nav .mainMenu li a {
     display: inline-block;
-    padding: 15px;
+    padding: 50px;
+    border-style: hidden solid hidden hidden;
+    border-color: #fff;
+    border-width: 1px;
     text-decoration: none ;
     text-transform: lowercase;
-    color: red;
+    color: var(--primary);
     font-size: 1.5rem;
 }
 
 nav .mainMenu li a:hover {
     background: #fff;
     text-transform: uppercase;
+    border-style: hidden hidden hidden hidden;
 }
 nav .openMenu {
     font-size: 2rem;
-    margin: 20px;
+    margin: 1px;
     display: none;
     cursor: pointer;
 }
@@ -73,7 +89,128 @@ nav .logo {
     margin: 6px;
     cursor: pointer;
 }
+/*Header*/
+.banner {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    background-color: var(--light);
+}
+.bArt {
+    place-items:left;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    width: 75%;
+    max-width: 100%;
+    object-fit: fill;
+}
+.G {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    width: 3rem;
+    max-width: 100%; 
+    float: right;
+    margin-top: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 1px;
+}
+.G:hover {
+    background-color: var(--primary);
+}
+.banner h1 {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    text-align: right;
+    margin-top: 100px;
+    margin-right: 100px;
+    font-size: 5rem;
+    color: var(--dark);
+    text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+}
+
+.banner p {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    object-position: right;
+    text-align: right;
+    margin-top: 13rem;
+    margin-right:15rem;
+    margin-left: 50rem;
+    
+
+}
+
+.banner .socials {
+    margin-right: 23rem;
+}
+
+/*About*/
+.About {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 100%;
+    padding-bottom: 100px;
+    background-color: var(--light);
+}
+.About h1 {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    text-align: right;
+    margin-top: 100px;
+    margin-right: 300px;
+    padding-bottom: 100px;
+    font-size: 5rem;
+    color: var(--dark);
+    text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+    max-width: 100%;
+}
+.About p {
+    font-family: 'Didact Gothic', sans-serif;
+    grid-column: 2/2;
+    grid-row: 1/1;
+    object-position: right;
+    text-align: left;
+    margin-top: 13rem;
+    white-space:pre-wrap;
+    word-wrap: break-word;
+   
+
+}
+.me {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    width: 60%;
+    margin-top: 1rem;
+    margin-left: 20rem;
+    max-width: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+    border-style: solid solid solid solid;
+    border-width: 10px;
+    border-color: var(--primary);
+}
+/*Footer*/
+footer {
+   
+  width: 100vw;
+    margin-top: 5rem;
+    background: var(--dark);
+    color: var(--primary);
+    text-align: center;
+    font-size: 1.5em;
+    padding: 2rem;
+    border-style: solid hidden solid hidden;
+    border-width: 1px;
+    border-color: var(--light);
+}
+
 @media(max-width: 800px) {
+    .body {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+/*Navigation*/    
     nav .mainMenu {
         height: 100vh;
         position: fixed;
@@ -87,6 +224,10 @@ nav .logo {
         background: #000;
         transition:top 1s ease;
         display: none;
+        
+    }
+    nav .mainMenu li a {
+        border-style: hidden hidden hidden hidden;
     }
     nav .mainMenu .closeMenu {
         display: block;
@@ -106,5 +247,76 @@ nav .logo {
         display: inline-block;
         padding: 12px;
     }
+
+
+  /*Homepage*/  
+    .banner {
+        display: grid;
+       grid-template-columns: 100%;
+       
+       width: 100vw;
+       height: 100vh;
+    }
+    .socials {
+        display: flex;
+        width: 10rem;
+        max-width: 100%;
+        padding-left: 100px;
+    }
+    .bArt {
+        max-width: 100%;
+        width:100%;
+    }
+.banner h1{
+    width: 100%;
+    font-size:4rem;
+    text-align: left;
+    margin-right: 10px;
+    margin-top: 400px;
+}
+.banner p {
+    font-size: 10px;
+    text-align: left;
+    width: 100%;
+    object-position: left;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-top: 500px;
+}
+/*About*/
+.About {
+    display: grid;
+   grid-template-columns: 100%;
+   
+   width: 100vw;
+   height: 100vh;
+}
+.me {
+    max-width: 100%;
+    width:50%;
+    margin: 20px auto;
+}
+.About h1{
+   grid-column: 1;
+   font-size: 4rem;
+   width: 100%;
+   margin: 20rem auto;
+   padding-left: 100px;
+   text-align: left;
+    
+}
+.About p {
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 10px;
+    text-align: left;
+    width: 100%;
+    object-position: left;
+    margin-top: 25rem;
+    margin-left: 75px;
+    white-space: wrap;
+
+   
+}
 }
 
