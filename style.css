@@ -146,7 +146,57 @@ nav .logo {
 .banner .socials {
     margin-right: 23rem;
 }
+/*Projects*/
+.Projects {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    background-color: #F0BE0B;
+    height: 50rem;
+    margin-top: 3rem;
+    border-style: solid hidden solid hidden;
+    border-color: var(--dark);
+}
+.Projects1 {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    background-color: #b16ad2;
+    height: 50rem;
+    margin-top: 3rem;
+    border-style: solid hidden solid hidden;
+    border-color: var(--dark);
+}
+.hs {
+    place-items:left;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    width: 50%;
+    opacity: 0.5;
+    max-width: 100%;
+    object-fit: fill;
+}
+.projH {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    text-align: right;
+    margin-top: 100px;
+    margin-right: 100px;
+    font-size: 5rem;
+    color: var(--dark);
+    text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
+}
+.projP {
+    grid-column: 1/1;
+    grid-row: 1/1;
+    object-position: right;
+    text-align: right;
+    margin-top: 13rem;
+    margin-right:15rem;
+    margin-left: 50rem;
+    
 
+}
 /*About*/
 .About {
     display: grid;
@@ -158,7 +208,7 @@ nav .logo {
 .About h1 {
     grid-column: 2/2;
     grid-row: 1/1;
-    text-align: right;
+    text-align: left;
     margin-top: 100px;
     margin-right: 300px;
     padding-bottom: 100px;
@@ -223,6 +273,7 @@ nav .logo {
     justify-content: center;
     padding-top: 10rem;
     opacity: 0;
+    width: 100%;
 }
 .email:hover {
     opacity: 1;
@@ -258,6 +309,7 @@ nav .logo {
 .num:hover {
     opacity: 1;
 }
+
 /*Footer*/
 footer {
    
@@ -351,6 +403,41 @@ footer {
     margin-left: 100px;
     margin-top: 500px;
 }
+/*Projects*/
+.Projects {
+    display: grid;
+    grid-template-columns: 100%;
+    
+    width: 100vw;
+    height: 60vh;
+}
+.Projects1 {
+    display: grid;
+    grid-template-columns: 100%;
+    
+    width: 100vw;
+    height: 60vh;
+}
+.hs {
+    max-width: 100%;
+    width:100%;
+}
+.projH{
+    width: 100%;
+    font-size:3rem;
+    text-align: left;
+    margin-top: 26rem;
+    margin-left: 2rem;
+}
+.projP {
+    font-size: 10px;
+    text-align: left;
+    width: 100%;
+    object-position: left;
+   
+    margin-left: 100px;
+    margin-top: 500px;
+}
 /*About*/
 .About {
     display: grid;
@@ -362,13 +449,13 @@ footer {
 .me {
     max-width: 100%;
     width:50%;
-    margin: 20px auto;
+    margin: 10px auto;
 }
 .About h1{
    grid-column: 1;
    font-size: 4rem;
    width: 100%;
-   margin: 20rem auto;
+   margin: 25rem auto;
    padding-left: 100px;
    text-align: left;
     
@@ -380,11 +467,13 @@ footer {
     text-align: left;
     width: 100%;
     object-position: left;
-    margin-top: 25rem;
+    margin-top: 30rem;
     margin-left: 75px;
     white-space: wrap;
+}
+.contact {
+grid-template-columns: 10%;
 
-   
 }
 }
 
