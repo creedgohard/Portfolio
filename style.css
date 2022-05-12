@@ -380,15 +380,15 @@ nav .logo {
 .About h1 {
     grid-column: 2/2;
     grid-row: 1/1;
-    text-align: left;
+    text-align: right;
     margin-top: 100px;
-    margin-right: 300px;
-    padding-bottom: 100px;
-    font-size: 5rem;
+    padding-right: 25rem;
+    max-width: 100%;
+    font-size: 3rem;
     color: var(--dark);
     text-shadow: -1px -1px 0 var(--primary), 1px -1px 0 var(--primary), -1px 1px 0 var(--primary), 1px 1px 0 var(--primary);
-    max-width: 100%;
 }
+
 .About p {
     font-family: 'Didact Gothic', sans-serif;
     grid-column: 2/2;
